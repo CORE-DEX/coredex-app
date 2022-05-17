@@ -1,6 +1,6 @@
 import { Token } from '@cocore/swap-sdk'
 import { SupportedChainId } from 'constants/chains'
-import { WRAPPED_NATIVE_CURRENCY } from 'constants/tokens'
+import { WETH_MUMBAI, WETH_POLYGON, WRAPPED_NATIVE_CURRENCY } from 'constants/tokens'
 
 export interface SerializedToken {
   chainId: number
@@ -33,13 +33,17 @@ export function deserializeToken(serializedToken: SerializedToken): Token {
 export function formatTokenSymbol(address: string, symbol: string, chainId: number | undefined) {
   // dumb catch for matic
   if (
-    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address &&
+    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.toLowerCase() &&
     (chainId === SupportedChainId.POLYGON || chainId === SupportedChainId.MUMBAI)
   ) {
     return 'MATIC'
   }
 
-  if (WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.includes(address)) {
+  if (
+    WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.toLowerCase().includes(address) ||
+    address === WETH_POLYGON.address.toLowerCase() ||
+    address === WETH_MUMBAI.address.toLowerCase()
+  ) {
     return 'ETH'
   }
 
@@ -49,13 +53,17 @@ export function formatTokenSymbol(address: string, symbol: string, chainId: numb
 export function formatTokenName(address: string, name: string, chainId: number | undefined) {
   // dumb catch for matic
   if (
-    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address &&
+    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.toLowerCase() &&
     (chainId === SupportedChainId.POLYGON || chainId === SupportedChainId.MUMBAI)
   ) {
     return 'MATIC'
   }
 
-  if (WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.includes(address)) {
+  if (
+    WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.toLowerCase().includes(address) ||
+    address === WETH_POLYGON.address.toLowerCase() ||
+    address === WETH_MUMBAI.address.toLowerCase()
+  ) {
     return 'Ether'
   }
 
