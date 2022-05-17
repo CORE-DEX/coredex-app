@@ -76,6 +76,7 @@ export default createReducer(initialState, (builder) =>
     .addCase(updateTokenData, (state, { payload: { tokens, chainId } }) => {
       tokens.map(
         (tokenData) =>
+          tokenData.exists &&
           (state.byAddress[chainId][tokenData.address] = {
             ...state.byAddress[chainId][tokenData.address],
             data: tokenData,

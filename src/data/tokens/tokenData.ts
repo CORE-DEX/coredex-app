@@ -100,8 +100,8 @@ export function useFetchedTokenDatas(tokenAddresses: string[]): {
     client: dataClient,
   })
 
-  const anyError = Boolean(error || error24 || error48 || blockError)
-  const anyLoading = Boolean(loading || loading24 || loading48 || !blocks)
+  const anyError = Boolean(error || error24 || error48 || blockError || errorWeek)
+  const anyLoading = Boolean(loading || loading24 || loading48 || loadingWeek || !blocks)
 
   if (!ethPrices) {
     return {

@@ -30,32 +30,32 @@ export function deserializeToken(serializedToken: SerializedToken): Token {
   )
 }
 
-export function formatTokenSymbol(address: string, symbol: string, activeNetwork: number | undefined) {
+export function formatTokenSymbol(address: string, symbol: string, chainId: number | undefined) {
   // dumb catch for matic
   if (
-    address === WRAPPED_NATIVE_CURRENCY[activeNetwork ?? -1].address &&
-    (activeNetwork === SupportedChainId.POLYGON || activeNetwork === SupportedChainId.MUMBAI)
+    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address &&
+    (chainId === SupportedChainId.POLYGON || chainId === SupportedChainId.MUMBAI)
   ) {
     return 'MATIC'
   }
 
-  if (WRAPPED_NATIVE_CURRENCY[activeNetwork ?? -1].address.includes(address)) {
+  if (WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.includes(address)) {
     return 'ETH'
   }
 
   return symbol
 }
 
-export function formatTokenName(address: string, name: string, activeNetwork: number | undefined) {
+export function formatTokenName(address: string, name: string, chainId: number | undefined) {
   // dumb catch for matic
   if (
-    address === WRAPPED_NATIVE_CURRENCY[activeNetwork ?? -1].address &&
-    (activeNetwork === SupportedChainId.POLYGON || activeNetwork === SupportedChainId.MUMBAI)
+    address === WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address &&
+    (chainId === SupportedChainId.POLYGON || chainId === SupportedChainId.MUMBAI)
   ) {
     return 'MATIC'
   }
 
-  if (WRAPPED_NATIVE_CURRENCY[activeNetwork ?? -1].address.includes(address)) {
+  if (WRAPPED_NATIVE_CURRENCY[chainId ?? -1].address.includes(address)) {
     return 'Ether'
   }
 

@@ -3,7 +3,6 @@ import { DEFAULT_DEADLINE_FROM_NOW } from 'constants/misc'
 
 import { updateVersion } from '../global/actions'
 import {
-  addSavedAccounts,
   addSavedPool,
   addSavedToken,
   addSerializedPair,
@@ -55,7 +54,6 @@ export interface UserState {
 
   savedTokens: string[]
   savedPools: string[]
-  savedAccounts: string[]
 
   timestamp: number
   URLWarningVisible: boolean
@@ -76,7 +74,6 @@ export const initialState: UserState = {
   pairs: {},
   savedTokens: [],
   savedPools: [],
-  savedAccounts: [],
   timestamp: currentTimestamp(),
   URLWarningVisible: true,
 }
@@ -193,15 +190,5 @@ export default createReducer(initialState, (builder) =>
     })
     .addCase(toggleURLWarning, (state) => {
       state.URLWarningVisible = !state.URLWarningVisible
-    })
-    .addCase(addSavedAccounts, (state, { payload: { account } }) => {
-      if (!state.savedAccounts || !state.savedAccounts.includes(account)) {
-        const newAccounts = state.savedAccounts ?? []
-        newAccounts.push(account)
-        state.savedAccounts = newAccounts
-      } else if (state.savedAccounts && state.savedAccounts.includes(account)) {
-        const newAccounts = state.savedAccounts.filter((x) => x !== account)
-        state.savedAccounts = newAccounts
-      }
     })
 )
