@@ -13,7 +13,7 @@ export const GLOBAL_DATA = (block?: string) => {
   const queryString = ` query cocoreswapFactories {
       cocoreswapFactories(
        ${block ? `block: { number: ${block}}` : ``} 
-       where: { id: "${FACTORY_ADDRESS}" }) {
+       where: { id: "${FACTORY_ADDRESS.toLowerCase()}" }) {
         totalVolumeUSD
         totalVolumeETH
         untrackedVolumeUSD

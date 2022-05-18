@@ -78,6 +78,23 @@ const TopWrapper = styled.div<{ scrollColor?: string }>`
   `};
 `
 
+const ValueCard = styled(DarkGreyCard)<{ scrollColor?: string }>`
+  overflow-x: auto;
+
+  ::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.bg2};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ scrollColor }) => (scrollColor ? scrollColor : '#00cc227a')};
+    opacity: 0.5;
+  }
+`
+
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -217,20 +234,20 @@ export default function Home() {
               chartDisplay="overview"
               marginBottom="20px"
             />
-            <DarkGreyCard padding="10px">
+            <ValueCard scrollColor={activeNetwork.scrollColor} padding="10px">
               <RowBetween>
-                <RowFixed mr="20px">
-                  <TYPE.main mr="4px">Volume 24H: </TYPE.main>
+                <RowFixed mr="20px" minWidth="220px">
+                  <TYPE.main mr="4px">Volume24H: </TYPE.main>
                   <TYPE.label mr="4px">{formatDollarAmount(protocolData?.volumeUSD)}</TYPE.label>
                   <Percent value={protocolData?.volumeUSDChange} wrap={true} />
                 </RowFixed>
-                <RowFixed mr="20px">
-                  <TYPE.main mr="4px">Fees 24H: </TYPE.main>
+                <RowFixed mr="20px" minWidth="220px">
+                  <TYPE.main mr="4px">Fees24H: </TYPE.main>
                   <TYPE.label mr="4px">{formatDollarAmount(protocolData?.feesUSD)}</TYPE.label>
                   <Percent value={protocolData?.feeChange} wrap={true} />
                 </RowFixed>
                 <HideMedium>
-                  <RowFixed mr="20px">
+                  <RowFixed mr="20px" minWidth="220px">
                     <TYPE.main mr="4px">TVL: </TYPE.main>
                     <TYPE.label mr="4px">{formatDollarAmount(protocolData?.tvlUSD)}</TYPE.label>
                     <TYPE.main></TYPE.main>
@@ -238,7 +255,7 @@ export default function Home() {
                   </RowFixed>
                 </HideMedium>
               </RowBetween>
-            </DarkGreyCard>
+            </ValueCard>
           </ChartWrapper>
 
           <TopWrapper scrollColor={activeNetwork.scrollColor}>
