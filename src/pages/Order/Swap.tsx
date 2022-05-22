@@ -294,7 +294,6 @@ export default function Swap({ height }: { height?: string }) {
         onConfirm={handleConfirmTokenWarning}
         onDismiss={handleDismissTokenWarning}
       />
-      <NetworkAlert />
       <Hide1280>
         <SwapNameCard marginBottom="5px" />
       </Hide1280>
@@ -501,6 +500,7 @@ export default function Swap({ height }: { height?: string }) {
                 </ButtonError>
               )}
               {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}
+              <NetworkAlert />
               <SettingsTab placeholderSlippage={allowedSlippage} />
             </RowBetween>
           </AutoColumn>

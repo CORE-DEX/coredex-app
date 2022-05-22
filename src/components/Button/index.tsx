@@ -347,13 +347,13 @@ const CheckboxWrapper = styled.div`
 export function ButtonRadioChecked({ active = false, children, ...rest }: { active?: boolean } & ButtonProps) {
   if (!active) {
     return (
-      <ButtonOutlined borderRadius="12px" padding="12px 8px" {...rest}>
+      <ButtonOutlined padding="12px 8px" {...rest}>
         {<RowBetween>{children}</RowBetween>}
       </ButtonOutlined>
     )
   } else {
     return (
-      <ActiveOutlined {...rest} padding="12px 8px" borderRadius="12px">
+      <ActiveOutlined {...rest} padding="12px 8px">
         {
           <RowBetween>
             {children}
