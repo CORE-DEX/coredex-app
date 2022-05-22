@@ -6,11 +6,12 @@ import { FONT } from 'theme'
 
 const ToggleElement = styled.span<{ isActive?: boolean; isOnSwitch?: boolean }>`
   padding: 0.25rem 0.5rem;
-  border-radius: 14px;
+  border-radius: 0px;
   background: ${({ theme, isActive, isOnSwitch }) => (isActive ? (isOnSwitch ? theme.primary1 : theme.text4) : 'none')};
   color: ${({ theme, isActive, isOnSwitch }) => (isActive ? (isOnSwitch ? theme.white : theme.text2) : theme.text3)};
   font-size: 1rem;
   font-weight: 400;
+  font-family: ${FONT};
 
   padding: 0.35rem 0.6rem;
   background: ${({ theme, isActive, isOnSwitch }) => (isActive ? (isOnSwitch ? theme.primary1 : theme.text4) : 'none')};
@@ -26,7 +27,7 @@ const ToggleElement = styled.span<{ isActive?: boolean; isOnSwitch?: boolean }>`
 `
 
 const StyledToggle = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
-  border-radius: 12px;
+  border-radius: 0px;
   border: none;
   background: ${({ theme }) => theme.bg3};
   display: flex;

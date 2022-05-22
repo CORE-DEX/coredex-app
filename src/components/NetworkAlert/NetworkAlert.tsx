@@ -33,7 +33,6 @@ type NetworkAlertChains = keyof typeof SHOULD_SHOW_ALERT
 
 const LinkOutToBridge = styled(ExternalLink)`
   align-items: center;
-  border-radius: 8px;
   color: white;
   display: flex;
   font-size: 16px;

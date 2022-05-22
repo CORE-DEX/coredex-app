@@ -207,7 +207,7 @@ export default function CurrencyInputPanel({
         </FixedContainer>
       )}
       <Container hideInput={hideInput}>
-        <InputRow style={hideInput ? { padding: '0', borderRadius: '8px' } : {}} selected={!onCurrencySelect}>
+        <InputRow style={hideInput ? { padding: '0' } : {}} selected={!onCurrencySelect}>
           <CurrencySelect
             selected={!!currency}
             hideInput={hideInput}

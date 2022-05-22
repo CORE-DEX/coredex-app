@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { TYPE } from '../../theme'
+import { FONT, TYPE } from '../../theme'
 
 const Wrapper = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
   border: none;
@@ -27,6 +27,7 @@ const StatusText = styled(TYPE.main)<{ isActive?: boolean }>`
   margin: 0 10px;
   width: 24px;
   color: ${({ theme, isActive }) => (isActive ? theme.text1 : theme.text3)};
+  font-family: ${FONT};
 `
 
 interface ToggleProps {

@@ -296,7 +296,7 @@ export function ButtonDropdown({ disabled = false, children, ...rest }: { disabl
 
 export function ButtonDropdownGrey({ disabled = false, children, ...rest }: { disabled?: boolean } & ButtonProps) {
   return (
-    <ButtonGray {...rest} disabled={disabled} style={{ borderRadius: '20px' }}>
+    <ButtonGray {...rest} disabled={disabled}>
       <RowBetween>
         <div style={{ display: 'flex', alignItems: 'center' }}>{children}</div>
         <ChevronDown size={24} />

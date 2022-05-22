@@ -10,7 +10,7 @@ import styled, { ThemeContext } from 'styled-components/macro'
 import { ExplorerDataType, getExplorerLink } from 'utils/getExplorerLink'
 
 import { injected, walletconnect, walletlink } from '../../connectors'
-import { ExternalLink, LinkStyledButton, TYPE } from '../../theme'
+import { ExternalLink, FONT, LinkStyledButton, TYPE } from '../../theme'
 import { shortenAddress } from '../../utils'
 import { ButtonSecondary } from '../Button'
 import Identicon from '../Identicon'
@@ -363,7 +363,9 @@ export default function AccountDetails({
         <LowerSection>
           <AutoRow mb={'1rem'} style={{ justifyContent: 'space-between' }}>
             <TYPE.body>Recent Transactions</TYPE.body>
-            <LinkStyledButton onClick={clearAllTransactionsCallback}>clear all</LinkStyledButton>
+            <LinkStyledButton onClick={clearAllTransactionsCallback} style={{ fontFamily: FONT }}>
+              clear all
+            </LinkStyledButton>
           </AutoRow>
           {renderTransactions(pendingTransactions)}
           {renderTransactions(confirmedTransactions)}

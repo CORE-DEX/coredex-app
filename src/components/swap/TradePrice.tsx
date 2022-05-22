@@ -3,6 +3,7 @@ import React, { useCallback } from 'react'
 import { useContext } from 'react'
 import { Text } from 'rebass'
 import styled, { ThemeContext } from 'styled-components/macro'
+import { FONT } from 'theme'
 
 interface TradePriceProps {
   price: Price<Currency, Currency>
@@ -41,7 +42,7 @@ export default function TradePrice({ price, showInverted, setShowInverted }: Tra
 
   return (
     <StyledPriceContainer onClick={flipPrice} title={text}>
-      <div style={{ alignItems: 'center', display: 'flex', width: 'fit-content' }}>
+      <div style={{ alignItems: 'center', display: 'flex', width: 'fit-content', fontFamily: FONT }}>
         <Text fontWeight={500} fontSize={14} color={theme.text1}>
           {text}
         </Text>

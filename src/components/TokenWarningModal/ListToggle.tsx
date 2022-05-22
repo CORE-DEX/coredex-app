@@ -1,10 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { TYPE } from '../../theme'
+import { FONT, TYPE } from '../../theme'
 
 const Wrapper = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
-  border-radius: 20px;
   border: none;
   background: ${({ theme }) => theme.bg1};
   display: flex;
@@ -16,7 +15,6 @@ const Wrapper = styled.button<{ isActive?: boolean; activeElement?: boolean }>`
 `
 
 const ToggleElement = styled.span<{ isActive?: boolean; bgColor?: string }>`
-  border-radius: 50%;
   height: 24px;
   width: 24px;
   background-color: ${({ isActive, bgColor, theme }) => (isActive ? bgColor : theme.bg4)};
@@ -29,6 +27,7 @@ const StatusText = styled(TYPE.main)<{ isActive?: boolean }>`
   margin: 0 10px;
   width: 24px;
   color: ${({ theme, isActive }) => (isActive ? theme.text1 : theme.text3)};
+  font-family: ${FONT};
 `
 
 interface ToggleProps {

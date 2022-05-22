@@ -20,7 +20,7 @@ import { SwapShowAcceptChanges, TruncatedText } from './styleds'
 
 const ArrowWrapper = styled.div`
   padding: 4px;
-  border-radius: 12px;
+  border-radius: 0px;
   height: 32px;
   width: 32px;
   position: relative;
@@ -135,7 +135,7 @@ export default function SwapModalHeader({
               <TYPE.main color={theme.primary1}>Price Updated</TYPE.main>
             </RowFixed>
             <ButtonPrimary
-              style={{ padding: '.5rem', width: 'fit-content', fontSize: '0.825rem', borderRadius: '12px' }}
+              style={{ padding: '.5rem', width: 'fit-content', fontSize: '0.825rem' }}
               onClick={onAcceptChanges}
             >
               Accept

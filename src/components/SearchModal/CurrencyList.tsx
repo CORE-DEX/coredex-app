@@ -38,7 +38,6 @@ const Tag = styled.div`
   background-color: ${({ theme }) => theme.bg3};
   color: ${({ theme }) => theme.text2};
   font-size: 14px;
-  border-radius: 4px;
   padding: 0.25rem 0.3rem 0.25rem 0.3rem;
   max-width: 6rem;
   overflow: hidden;
@@ -177,7 +176,7 @@ function BreakLineComponent({ style }: { style: CSSProperties }) {
   const theme = useTheme()
   return (
     <FixedContentRow style={style}>
-      <LightGreyCard padding="8px 12px" $borderRadius="8px">
+      <LightGreyCard padding="8px 12px">
         <RowBetween>
           <RowFixed>
             <TokenListLogoWrapper src={TokenListLogo} />

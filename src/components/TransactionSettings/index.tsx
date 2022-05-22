@@ -7,7 +7,7 @@ import React, { useContext, useState } from 'react'
 import { useSetUserSlippageTolerance, useUserSlippageTolerance, useUserTransactionTTL } from 'state/user/hooks'
 import styled, { ThemeContext } from 'styled-components/macro'
 
-import { TYPE } from '../../theme'
+import { FONT, TYPE } from '../../theme'
 import { AutoColumn } from '../Column'
 import QuestionHelper from '../QuestionHelper'
 import { RowBetween, RowFixed } from '../Row'
@@ -50,6 +50,7 @@ const Option = styled(FancyButton)<{ active: boolean }>`
 const Input = styled.input`
   background: ${({ theme }) => theme.bg1};
   font-size: 16px;
+  font-family: ${FONT};
   width: auto;
   outline: none;
   &::-webkit-outer-spin-button,
@@ -170,6 +171,7 @@ export default function TransactionSettings({ placeholderSlippage }: Transaction
               parseSlippageInput('')
             }}
             active={userSlippageTolerance === 'auto'}
+            style={{ fontFamily: FONT }}
           >
             Auto
           </Option>
