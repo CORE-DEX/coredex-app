@@ -23,7 +23,7 @@ import { ApprovalState, useApproveCallbackFromTrade } from 'hooks/useApproveCall
 import { useIsSwapUnsupported } from 'hooks/useIsSwapUnsupported'
 import { useSwapCallback } from 'hooks/useSwapCallback'
 import { useUSDCValue } from 'hooks/useUSDCPrice'
-import useWrapCallback, { WrapType } from 'hooks/useWrapCallback'
+import useWrapCallback, { WrapErrorText, WrapType } from 'hooks/useWrapCallback'
 import { useActiveWeb3React } from 'hooks/web3'
 import JSBI from 'jsbi'
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
@@ -396,8 +396,13 @@ export default function Swap({ height }: { height?: string }) {
                 <ButtonLight onClick={toggleWalletModal}>Connect Wallet</ButtonLight>
               ) : showWrap ? (
                 <ButtonPrimary disabled={Boolean(wrapInputError)} onClick={onWrap}>
-                  {wrapInputError ??
-                    (wrapType === WrapType.WRAP ? 'Wrap' : wrapType === WrapType.UNWRAP ? 'Unwrap' : null)}
+                  {wrapInputError ? (
+                    <WrapErrorText wrapInputError={wrapInputError} />
+                  ) : wrapType === WrapType.WRAP ? (
+                    'Wrap'
+                  ) : wrapType === WrapType.UNWRAP ? (
+                    'Unwrap'
+                  ) : null}
                 </ButtonPrimary>
               ) : routeNotFound && userHasSpecifiedInputOutput ? (
                 <GreyCard style={{ textAlign: 'center' }}>
