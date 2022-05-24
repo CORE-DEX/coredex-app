@@ -105,7 +105,7 @@ export function usePoolsForToken(address: string): string[] | undefined {
   const dispatch = useAppDispatch()
   const { chainId } = useActiveWeb3React()
   const token = useAppSelector((state) => state.tokens.byAddress[chainId ?? -1]?.[address])
-  const poolsForToken = token.poolAddresses
+  const poolsForToken = token?.poolAddresses
   const [error, setError] = useState(false)
   const { dataClient } = useClients()
 
@@ -137,7 +137,7 @@ export function useTokenChartData(address: string): TokenChartEntry[] | undefine
   const dispatch = useAppDispatch()
   const { chainId } = useActiveWeb3React()
   const token = useAppSelector((state) => state.tokens.byAddress[chainId ?? -1]?.[address])
-  const chartData = token.chartData
+  const chartData = token?.chartData
   const [error, setError] = useState(false)
   const { dataClient } = useClients()
 
@@ -173,7 +173,7 @@ export function useTokenPriceData(
   const dispatch = useAppDispatch()
   const { chainId } = useActiveWeb3React()
   const token = useAppSelector((state) => state.tokens.byAddress[chainId ?? -1]?.[address])
-  const priceData = token.priceData[interval]
+  const priceData = token?.priceData[interval]
   const [error, setError] = useState(false)
   const { dataClient, blockClient } = useClients()
 
@@ -236,7 +236,7 @@ export function useTokenTransactions(address: string): Transaction[] | undefined
   const dispatch = useAppDispatch()
   const { chainId } = useActiveWeb3React()
   const token = useAppSelector((state) => state.tokens.byAddress[chainId ?? -1]?.[address])
-  const transactions = token.transactions
+  const transactions = token?.transactions
   const [error, setError] = useState(false)
   const { dataClient } = useClients()
 
