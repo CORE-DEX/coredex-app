@@ -1,3 +1,4 @@
+import PopupImg from 'assets/images/popup.png'
 import React, { useCallback, useContext, useEffect } from 'react'
 import { X } from 'react-feather'
 import { animated } from 'react-spring'
@@ -22,6 +23,9 @@ export const Popup = styled.div`
   display: inline-block;
   width: 100%;
   padding: 1em;
+  border: 2px solid #080808;
+  background: url(${PopupImg}) center no-repeat;
+  background-size: auto 100%;
   background-color: ${({ theme }) => theme.bg1};
   position: relative;
   padding: 20px;
