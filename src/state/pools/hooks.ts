@@ -113,8 +113,8 @@ export function usePoolHourlyRates(
   const [error, setError] = useState(false)
   const { dataClient, blockClient } = useClients()
   const hourlyRates = useAppSelector((state) => state.pools.byAddress[chainId ?? -1]?.[address])
-  const hourlyData = hourlyRates.hourlyData[interval]
-  const oldestTimestampFetched = hourlyRates.hourlyData.oldestFetchedTimestamp
+  const hourlyData = hourlyRates?.hourlyData[interval]
+  const oldestTimestampFetched = hourlyRates.hourlyData?.oldestFetchedTimestamp
 
   const utcCurrentTime = dayjs()
   const startTimestamp = utcCurrentTime.subtract(1, timeWindow).startOf('hour').unix()
