@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Token } from '@cocore/swap-sdk'
+import { CurrencyAmount, Percent, Token } from '@core-dex/sdk'
 import { AddressZero } from '@ethersproject/constants'
 
 import { calculateSlippageAmount } from './calculateSlippageAmount'

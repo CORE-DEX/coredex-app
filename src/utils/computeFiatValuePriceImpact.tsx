@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Token } from '@cocore/swap-sdk'
+import { CurrencyAmount, Percent, Token } from '@core-dex/sdk'
 import { ONE_HUNDRED_PERCENT } from 'constants/misc'
 import JSBI from 'jsbi'
 

@@ -1,4 +1,4 @@
-import { Token } from '@cocore/swap-sdk'
+import { Token } from '@core-dex/sdk'
 import { useIsTokenActive, useIsUserAddedToken } from 'hooks/Tokens'
 import useTheme from 'hooks/useTheme'
 import React, { CSSProperties } from 'react'

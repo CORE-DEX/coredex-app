@@ -1,11 +1,11 @@
-import { abi as ICocoreswapPairABI } from '@cocore/swap-core/build/ICocoreswapPair.json'
-import { computePairAddress, Currency, CurrencyAmount, Pair } from '@cocore/swap-sdk'
+import { abi as ICoreDexPairABI } from '@core-dex/core/build/ICoreDexPair.json'
+import { computePairAddress, Currency, CurrencyAmount, Pair } from '@core-dex/sdk'
 import { Interface } from '@ethersproject/abi'
 import { FACTORY_ADDRESSES } from 'constants/addresses'
 import { useMemo } from 'react'
 import { useMultipleContractSingleData } from 'state/multicall/hooks'
 
-const PAIR_INTERFACE = new Interface(ICocoreswapPairABI)
+const PAIR_INTERFACE = new Interface(ICoreDexPairABI)
 
 export enum PairState {
   LOADING,

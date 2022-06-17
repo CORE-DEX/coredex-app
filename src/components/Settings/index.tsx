@@ -1,4 +1,4 @@
-import { Percent } from '@cocore/swap-sdk'
+import { Percent } from '@core-dex/sdk'
 import { useOnClickOutside } from 'hooks/useOnClickOutside'
 import React, { useContext, useRef, useState } from 'react'
 import { Settings, X } from 'react-feather'

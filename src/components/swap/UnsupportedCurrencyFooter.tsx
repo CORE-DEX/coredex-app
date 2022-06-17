@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { useUnsupportedTokens } from 'hooks/Tokens'
 import { useActiveWeb3React } from 'hooks/web3'
 import React, { useState } from 'react'

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@core-dex/sdk'
 import {
   ALLOWED_PRICE_IMPACT_HIGH,
   ALLOWED_PRICE_IMPACT_LOW,

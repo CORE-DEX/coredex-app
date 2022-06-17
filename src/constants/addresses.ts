@@ -1,4 +1,4 @@
-import { FACTORY_ADDRESS } from '@cocore/swap-sdk'
+import { FACTORY_ADDRESS } from '@core-dex/sdk'
 import { constructSameAddressMap } from 'utils/constructSameAddressMap'
 
 import { SupportedChainId } from './chains'

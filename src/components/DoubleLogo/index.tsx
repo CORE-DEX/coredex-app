@@ -1,4 +1,4 @@
-import { Currency } from '@cocore/swap-sdk'
+import { Currency } from '@core-dex/sdk'
 import React from 'react'
 import styled from 'styled-components'
 

@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { parseBytes32String } from '@ethersproject/strings'
 import { createTokenFilterFunction } from 'components/SearchModal/filtering'
 import { arrayify } from 'ethers/lib/utils'

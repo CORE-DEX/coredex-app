@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@core-dex/sdk'
 import { parseUnits } from '@ethersproject/units'
 import { useCurrency } from 'hooks/Tokens'
 import useENS from 'hooks/useENS'

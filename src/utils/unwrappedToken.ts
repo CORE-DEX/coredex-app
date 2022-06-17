@@ -1,4 +1,4 @@
-import { Currency } from '@cocore/swap-sdk'
+import { Currency } from '@core-dex/sdk'
 import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from 'constants/tokens'
 
 import { supportedChainId } from './supportedChainId'

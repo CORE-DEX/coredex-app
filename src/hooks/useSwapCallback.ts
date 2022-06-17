@@ -1,4 +1,4 @@
-import { Currency, Percent, Router, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, Percent, Router, Trade, TradeType } from '@core-dex/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { useMemo } from 'react'
 import { useTransactionAdder } from 'state/transactions/hooks'
@@ -106,17 +106,17 @@ function swapErrorToUserReadableMessage(error: any): string {
   if (reason?.indexOf('execution reverted: ') === 0) reason = reason.substr('execution reverted: '.length)
 
   switch (reason) {
-    case 'CocoreswapRouter: EXPIRED':
+    case 'CoreDexRouter: EXPIRED':
       return `The transaction could not be sent because the deadline has passed. Please check that your transaction deadline is not too low.`
-    case 'CocoreswapRouter: INSUFFICIENT_OUTPUT_AMOUNT':
-    case 'CocoreswapRouter: EXCESSIVE_INPUT_AMOUNT':
+    case 'CoreDexRouter: INSUFFICIENT_OUTPUT_AMOUNT':
+    case 'CoreDexRouter: EXCESSIVE_INPUT_AMOUNT':
       return `This transaction will not succeed either due to price movement or fee on transfer. Try increasing your slippage tolerance.`
     case 'TransferHelper: TRANSFER_FROM_FAILED':
       return `The input token cannot be transferred. There may be an issue with the input token.`
-    case 'CocoreSwap: TRANSFER_FAILED':
+    case 'CORE DEX: TRANSFER_FAILED':
       return `The output token cannot be transferred. There may be an issue with the output token.`
-    case 'CocoreSwap: K':
-      return `The CocoreSwap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer.`
+    case 'CORE DEX: K':
+      return `The CORE DEX invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer.`
     case 'Too little received':
     case 'Too much requested':
     case 'STF':

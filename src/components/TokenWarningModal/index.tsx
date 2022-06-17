@@ -1,4 +1,4 @@
-import { Token } from '@cocore/swap-sdk'
+import { Token } from '@core-dex/sdk'
 import React from 'react'
 
 import Modal from '../Modal'

@@ -1,4 +1,4 @@
-import { Token } from '@cocore/swap-sdk'
+import { Token } from '@core-dex/sdk'
 import { useToken } from 'hooks/Tokens'
 import useTheme from 'hooks/useTheme'
 import { useActiveWeb3React } from 'hooks/web3'

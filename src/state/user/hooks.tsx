@@ -1,4 +1,4 @@
-import { computePairAddress, Pair, Percent, Token } from '@cocore/swap-sdk'
+import { computePairAddress, Pair, Percent, Token } from '@core-dex/sdk'
 import { FACTORY_ADDRESSES } from 'constants/addresses'
 import { BASES_TO_TRACK_LIQUIDITY_FOR, PINNED_PAIRS } from 'constants/routing'
 import { useAllTokens } from 'hooks/Tokens'
@@ -247,8 +247,8 @@ export function toLiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
     tokenA.chainId,
     computePairAddress({ factoryAddress: FACTORY_ADDRESSES[tokenA.chainId], tokenA, tokenB }),
     18,
-    'CCS',
-    'CocoreSwap'
+    'CD-LP',
+    'CORE DEX LPs'
   )
 }
 

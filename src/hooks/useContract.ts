@@ -1,5 +1,5 @@
-import { abi as ICocoreswapPairABI } from '@cocore/swap-core/build/ICocoreswapPair.json'
-import { abi as ICocoreswapRouter02ABI } from '@cocore/swap-periphery/build/ICocoreswapRouter02.json'
+import { abi as ICoreDexPairABI } from '@core-dex/core/build/ICoreDexPair.json'
+import { abi as ICoreDexRouter02ABI } from '@core-dex/periphery/build/ICoreDexRouter02.json'
 import { Contract } from '@ethersproject/contracts'
 import ARGENT_WALLET_DETECTOR_ABI from 'abis/argent-wallet-detector.json'
 import EIP_2612 from 'abis/eip_2612.json'
@@ -79,11 +79,11 @@ export function useEIP2612Contract(tokenAddress?: string): Contract | null {
 }
 
 export function usePairContract(pairAddress?: string, withSignerIfPossible?: boolean): Contract | null {
-  return useContract(pairAddress, ICocoreswapPairABI, withSignerIfPossible)
+  return useContract(pairAddress, ICoreDexPairABI, withSignerIfPossible)
 }
 
 export function useRouterContract(): Contract | null {
-  return useContract(ROUTER_ADDRESS, ICocoreswapRouter02ABI, true)
+  return useContract(ROUTER_ADDRESS, ICoreDexRouter02ABI, true)
 }
 
 export function useMulticallContract(): Contract | null {

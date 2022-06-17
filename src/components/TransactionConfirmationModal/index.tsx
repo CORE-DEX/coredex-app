@@ -1,4 +1,4 @@
-import { Currency } from '@cocore/swap-sdk'
+import { Currency } from '@core-dex/sdk'
 import Circle from 'assets/images/blue-loader.svg'
 import MetaMaskLogo from 'assets/images/metamask.png'
 import useAddTokenToMetamask from 'hooks/useAddTokenToMetamask'

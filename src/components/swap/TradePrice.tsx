@@ -1,4 +1,4 @@
-import { Currency, Price } from '@cocore/swap-sdk'
+import { Currency, Price } from '@core-dex/sdk'
 import React, { useCallback } from 'react'
 import { useContext } from 'react'
 import { Text } from 'rebass'

@@ -1,4 +1,4 @@
-import { Currency } from '@cocore/swap-sdk'
+import { Currency } from '@core-dex/sdk'
 import { SupportedChainId } from 'constants/chains'
 import useHttpLocations from 'hooks/useHttpLocations'
 import React, { useMemo } from 'react'
@@ -29,8 +29,8 @@ export const getTokenLogoURL = (
   const networkName = chainIdToNetworkName(chainId)
   const networksWithUrls = [SupportedChainId.MAINNET, SupportedChainId.POLYGON]
   if (networksWithUrls.includes(chainId)) {
-    //if (address == COCORE_COIN) {
-    //  return `https://raw.githubusercontent.com/CocoreProjects/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
+    //if (address == CORE_COIN) {
+    //  return `https://raw.githubusercontent.com/CORE-DEX/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
     //} else {}
     return `https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/${networkName}/assets/${address}/logo.png`
   }

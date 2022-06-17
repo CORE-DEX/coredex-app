@@ -1,5 +1,5 @@
 import { ApolloClient, NormalizedCacheObject, useQuery } from '@apollo/client'
-import { FACTORY_ADDRESS } from '@cocore/swap-sdk'
+import { FACTORY_ADDRESS } from '@core-dex/sdk'
 import gql from 'graphql-tag'
 import { useBlocksFromTimestamps } from 'hooks/useBlocksFromTimestamps'
 import { useEthPrices } from 'hooks/useEthPrices'
@@ -10,8 +10,8 @@ import { get2DayChange, getPercentChange } from 'utils/data'
 import { useDeltaTimestamps } from 'utils/queries'
 
 export const GLOBAL_DATA = (block?: string) => {
-  const queryString = ` query cocoreswapFactories {
-      cocoreswapFactories(
+  const queryString = ` query coreDexFactories {
+      coreDexFactories(
        ${block ? `block: { number: ${block}}` : ``} 
        where: { id: "${FACTORY_ADDRESS.toLowerCase()}" }) {
         totalVolumeUSD
@@ -27,7 +27,7 @@ export const GLOBAL_DATA = (block?: string) => {
 }
 
 interface GlobalResponse {
-  cocoreswapFactories: {
+  coreDexFactories: {
     totalVolumeUSD: string
     totalVolumeETH: string
     untrackedVolumeUSD: string
@@ -75,9 +75,9 @@ export function useFetchProtocolData(
   const anyError = Boolean(error || error24 || error48 || blockError)
   const anyLoading = Boolean(loading || loading24 || loading48)
 
-  const parsed = data?.cocoreswapFactories?.[0]
-  const parsed24 = data24?.cocoreswapFactories?.[0]
-  const parsed48 = data48?.cocoreswapFactories?.[0]
+  const parsed = data?.coreDexFactories?.[0]
+  const parsed24 = data24?.coreDexFactories?.[0]
+  const parsed48 = data48?.coreDexFactories?.[0]
 
   const formattedData: ProtocolData | undefined = useMemo(() => {
     if (anyError || anyLoading || !parsed || !blocks) {

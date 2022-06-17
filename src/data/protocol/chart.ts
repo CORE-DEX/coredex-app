@@ -15,8 +15,8 @@ dayjs.extend(weekOfYear)
 const ONE_DAY_UNIX = 24 * 60 * 60
 
 const GLOBAL_CHART = gql`
-  query cocoreswapDayDatas($startTime: Int!, $skip: Int!) {
-    cocoreswapDayDatas(
+  query coreDexDayDatas($startTime: Int!, $skip: Int!) {
+    coreDexDayDatas(
       first: 1000
       skip: $skip
       subgraphError: allow
@@ -33,7 +33,7 @@ const GLOBAL_CHART = gql`
 `
 
 interface ChartResults {
-  cocoreswapDayDatas: {
+  coreDexDayDatas: {
     date: number
     dailyVolumeUSD: string
     totalLiquidityUSD: string
@@ -69,11 +69,11 @@ async function fetchChartData(client: ApolloClient<NormalizedCacheObject>) {
       })
       if (!loading) {
         skip += 1000
-        if (chartResData.cocoreswapDayDatas.length < 1000 || error) {
+        if (chartResData.coreDexDayDatas.length < 1000 || error) {
           allFound = true
         }
         if (chartResData) {
-          data = data.concat(chartResData.cocoreswapDayDatas)
+          data = data.concat(chartResData.coreDexDayDatas)
         }
       }
     }

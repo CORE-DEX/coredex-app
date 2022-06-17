@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Pair, Trade, TradeType } from '@core-dex/sdk'
 import { BETTER_TRADE_LESS_HOPS_THRESHOLD } from 'constants/misc'
 import { useMemo } from 'react'
 import { isTradeBetter } from 'utils/isTradeBetter'

@@ -1,4 +1,4 @@
-import { Currency } from '@cocore/swap-sdk'
+import { Currency } from '@core-dex/sdk'
 import { COMMON_BASES } from 'constants/routing'
 import React from 'react'
 import { Text } from 'rebass'

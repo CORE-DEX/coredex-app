@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token } from '@core-dex/sdk'
 import { ButtonDropdownLight } from 'components/Button'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'

@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { CurrencyAmount, Token } from '@core-dex/sdk'
 import { useMemo } from 'react'
 import { useSingleCallResult } from 'state/multicall/hooks'
 

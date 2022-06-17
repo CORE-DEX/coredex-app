@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { ADDITIONAL_BASES, BASES_TO_CHECK_TRADES_AGAINST, CUSTOM_BASES } from 'constants/routing'
 import { useMemo } from 'react'
 

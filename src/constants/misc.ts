@@ -1,4 +1,4 @@
-import { Percent } from '@cocore/swap-sdk'
+import { Percent } from '@core-dex/sdk'
 import JSBI from 'jsbi'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'

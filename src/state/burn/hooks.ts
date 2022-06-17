@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Percent, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Pair, Percent, Token } from '@core-dex/sdk'
 import { usePair } from 'hooks/usePairs'
 import { useTotalSupply } from 'hooks/useTotalSupply'
 import { useActiveWeb3React } from 'hooks/web3'

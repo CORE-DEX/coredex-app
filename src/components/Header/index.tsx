@@ -92,7 +92,7 @@ const Title = styled(NavLink)`
   `};
 `
 
-const CocoreIcon = styled.div`
+const CoreDexIcon = styled.div`
   transition: transform 0.3s ease;
   :hover {
     transform: rotate(-5deg);
@@ -199,9 +199,9 @@ export default function Header() {
     <HeaderFrame>
       <HeaderRow>
         <Title to={'/'}>
-          <CocoreIcon>
+          <CoreDexIcon>
             <img width={'24px'} src={LogoDark} alt="logo" />
-          </CocoreIcon>
+          </CoreDexIcon>
         </Title>
         <HeaderLinks>
           <StyledNavLink id={`overview-nav-link`} to={'/'} isActive={(match, { pathname }) => pathname === '/'}>

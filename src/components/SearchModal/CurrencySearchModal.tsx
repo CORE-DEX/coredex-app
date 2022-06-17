@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { TokenList } from '@uniswap/token-lists'
 import useLast from 'hooks/useLast'
 import usePrevious from 'hooks/usePrevious'

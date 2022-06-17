@@ -1,4 +1,4 @@
-import { Currency, Ether, NativeCurrency, Token, WETH9 } from '@cocore/swap-sdk'
+import { Currency, Ether, NativeCurrency, Token, WETH9 } from '@core-dex/sdk'
 
 import { SupportedChainId } from './chains'
 

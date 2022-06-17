@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, Percent, Trade, TradeType } from '@core-dex/sdk'
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from 'styled-components/macro'
 import { computeRealizedLPFeePercent } from 'utils/prices'

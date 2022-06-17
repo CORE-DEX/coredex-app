@@ -1,5 +1,5 @@
-import { abi as ICocoreswapRouter02ABI } from '@cocore/swap-periphery/build/ICocoreswapRouter02.json'
-import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@cocore/swap-sdk'
+import { abi as ICoreDexRouter02ABI } from '@core-dex/periphery/build/ICoreDexRouter02.json'
+import { Currency, CurrencyAmount, Fraction, Percent, Token } from '@core-dex/sdk'
 import { getAddress } from '@ethersproject/address'
 import { BigNumber } from '@ethersproject/bignumber'
 import { AddressZero } from '@ethersproject/constants'
@@ -100,7 +100,7 @@ export function getContract(address: string, ABI: any, library: Web3Provider, ac
 
 // account is optional
 export function getRouterContract(_: number, library: Web3Provider, chainId: number, account?: string): Contract {
-  return getContract(ROUTER_ADDRESS[chainId], ICocoreswapRouter02ABI, library, account)
+  return getContract(ROUTER_ADDRESS[chainId], ICoreDexRouter02ABI, library, account)
 }
 
 export function escapeRegExp(string: string): string {

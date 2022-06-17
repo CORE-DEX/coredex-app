@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@cocore/swap-sdk'
+import { Currency, Percent, Price } from '@core-dex/sdk'
 import { AutoColumn } from 'components/Column'
 import { AutoRow } from 'components/Row'
 import { ONE_BIPS } from 'constants/misc'

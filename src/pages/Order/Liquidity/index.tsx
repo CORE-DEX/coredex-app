@@ -1,4 +1,4 @@
-import { Pair } from '@cocore/swap-sdk'
+import { Pair } from '@core-dex/sdk'
 import { ButtonPrimary, ButtonSecondary } from 'components/Button'
 import Card, { DarkGreyCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'

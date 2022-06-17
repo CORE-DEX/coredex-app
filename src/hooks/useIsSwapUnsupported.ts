@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { useMemo } from 'react'
 
 import { useUnsupportedTokens } from './Tokens'

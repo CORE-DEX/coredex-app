@@ -1,4 +1,4 @@
-import { Token } from '@cocore/swap-sdk'
+import { Token } from '@core-dex/sdk'
 import { SupportedChainId } from 'constants/chains'
 import { WETH_MUMBAI, WETH_POLYGON, WRAPPED_NATIVE_CURRENCY } from 'constants/tokens'
 

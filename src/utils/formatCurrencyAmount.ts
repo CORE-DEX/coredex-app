@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Price } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Fraction, Price } from '@core-dex/sdk'
 import JSBI from 'jsbi'
 
 export function formatCurrencyAmount(amount: CurrencyAmount<Currency> | undefined, sigFigs: number) {

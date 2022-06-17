@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, Percent, Trade, TradeType } from '@core-dex/sdk'
 import React, { ReactNode, useCallback, useMemo } from 'react'
 import { Text } from 'rebass'
 

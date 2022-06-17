@@ -22,7 +22,7 @@ export const blockClient = new ApolloClient({
 })
 
 export const client = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/cocoreprojects/cocoreswap-mainnet',
+  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-mainnet',
   cache: new InMemoryCache(),
   //shouldBatch: true,
   defaultOptions: {
@@ -37,7 +37,7 @@ export const client = new ApolloClient({
 })
 
 export const ropstenClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/cocoreprojects/cocoreswap-ropsten',
+  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-ropsten',
   cache: new InMemoryCache(),
   //shouldBatch: true,
   defaultOptions: {
@@ -66,7 +66,7 @@ export const ropstenBlockClient = new ApolloClient({
 })
 
 export const polygonClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/cocoreprojects/cocoreswap-polygon',
+  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-polygon',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {
@@ -96,7 +96,7 @@ export const polygonBlockClient = new ApolloClient({
 })
 
 export const mumbaiClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/cocoreprojects/cocoreswap-mumbai',
+  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-mumbai',
   cache: new InMemoryCache(),
   queryDeduplication: true,
   defaultOptions: {

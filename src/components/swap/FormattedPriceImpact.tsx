@@ -1,4 +1,4 @@
-import { Percent } from '@cocore/swap-sdk'
+import { Percent } from '@core-dex/sdk'
 import React from 'react'
 import { warningSeverity } from 'utils/prices'
 

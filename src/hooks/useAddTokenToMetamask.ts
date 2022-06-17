@@ -1,4 +1,4 @@
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 import { getTokenLogoURL } from 'components/CurrencyLogo/index'
 import { useCallback, useState } from 'react'
 

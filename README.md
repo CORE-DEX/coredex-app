@@ -1,10 +1,10 @@
-# CocoreSwap App
+# CORE DEX App
 
 This repository has been forked from [UniswapV2](https://github.com/Uniswap/v2-subgraph)
 
-## CocoreSwap Info
+## CORE DEX Info
 
-An open sourced interface for CocoreSwap analytics. 
+An open sourced interface for CORE DEX analytics. 
 
 ## Development
 

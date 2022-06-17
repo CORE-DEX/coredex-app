@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token } from '@core-dex/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { useSingleCallResult } from 'state/multicall/hooks'
 

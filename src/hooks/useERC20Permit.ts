@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token } from '@core-dex/sdk'
 import { splitSignature } from '@ethersproject/bytes'
 import { DAI, USDC } from 'constants/tokens'
 import JSBI from 'jsbi'
@@ -244,7 +244,7 @@ function useERC20Permit(
 
 const REMOVE_LIQUIDITY_PERMIT_INFO: PermitInfo = {
   version: '1',
-  name: 'CocoreSwap',
+  name: 'CORE DEX LPs',
   type: PermitType.AMOUNT,
 }
 

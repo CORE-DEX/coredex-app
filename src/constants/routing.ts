@@ -1,5 +1,5 @@
 // a list of tokens by chain
-import { Currency, Token } from '@cocore/swap-sdk'
+import { Currency, Token } from '@core-dex/sdk'
 
 import { SupportedChainId } from './chains'
 import {

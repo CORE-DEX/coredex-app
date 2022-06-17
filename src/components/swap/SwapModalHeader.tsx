@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, Percent, Trade, TradeType } from '@core-dex/sdk'
 import { useUSDCValue } from 'hooks/useUSDCPrice'
 import React, { useContext, useState } from 'react'
 import { AlertTriangle, ArrowDown } from 'react-feather'

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Percent } from '@core-dex/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
 import { ButtonError, ButtonLight, ButtonPrimary } from 'components/Button'

@@ -51,12 +51,12 @@ export function useFetchedSubgraphStatus(): {
     variables: {
       name:
         chainId === SupportedChainId.MAINNET
-          ? 'cocoreprojects/cocoreswap-mainnet'
+          ? 'core-dex/core-dex-mainnet'
           : chainId === SupportedChainId.ROPSTEN
-          ? 'cocoreprojects/cocoreswap-ropsten'
+          ? 'core-dex/core-dex-ropsten'
           : chainId === SupportedChainId.POLYGON
-          ? 'cocoreprojects/cocoreswap-polygon'
-          : 'cocoreprojects/cocoreswap-mumbai',
+          ? 'core-dex/core-dex-polygon'
+          : 'core-dex/core-dex-mumbai',
     },
   })
 

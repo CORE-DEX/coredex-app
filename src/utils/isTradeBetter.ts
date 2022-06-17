@@ -1,4 +1,4 @@
-import { Currency, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, Percent, Trade, TradeType } from '@core-dex/sdk'
 import { ONE_HUNDRED_PERCENT, ZERO_PERCENT } from 'constants/misc'
 
 // returns whether tradeB is better than tradeA by at least a threshold percentage amount

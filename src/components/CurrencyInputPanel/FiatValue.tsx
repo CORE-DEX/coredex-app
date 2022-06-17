@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Percent } from '@core-dex/sdk'
 import useTheme from 'hooks/useTheme'
 import React, { useMemo } from 'react'
 import { Text } from 'rebass'

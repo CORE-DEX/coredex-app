@@ -1,4 +1,4 @@
-import { Currency, Percent } from '@cocore/swap-sdk'
+import { Currency, Percent } from '@core-dex/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { Contract } from '@ethersproject/contracts'
 import { TransactionResponse } from '@ethersproject/providers'

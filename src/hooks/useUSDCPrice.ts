@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Price, Token } from '@core-dex/sdk'
 import { SupportedChainId } from 'constants/chains'
 import { USDC, USDC_POLYGON } from 'constants/tokens'
 import { useMemo } from 'react'

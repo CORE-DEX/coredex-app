@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Fraction, Percent } from '@core-dex/sdk'
 import JSBI from 'jsbi'
 
 const ONE = new Fraction(1, 1)

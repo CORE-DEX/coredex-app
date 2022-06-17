@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token } from '@core-dex/sdk'
 import TokenListLogo from 'assets/svg/tokenlist.svg'
 import { useIsUserAddedToken } from 'hooks/Tokens'
 import useTheme from 'hooks/useTheme'

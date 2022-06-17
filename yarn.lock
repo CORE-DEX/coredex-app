@@ -1120,28 +1120,28 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@cocore/swap-core@^1.0.0-alpha":
-  version "1.0.0-alpha"
-  resolved "https://registry.yarnpkg.com/@cocore/swap-core/-/swap-core-1.0.0-alpha.tgz#f3590bda802adb0afc70a8679e4ac28266ae9480"
-  integrity sha512-0M3MeSNHIlmEivn+OcNXjs05vSYPcUn+g/WW75zaldI415qO33dLB7TTfKASl1unBIsYBFJlUy/w9z3/fNmobQ==
+"@core-dex/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@core-dex/core/-/core-1.0.1.tgz#dbf8c4b1f26b9f36739cec8949ae1b6d85e72290"
+  integrity sha512-WN+iGNkRu0c4LRrgB9rxdKoEQ/ZkTkZY+sEof1Wlg4qlqjdHhasgLvFhYrL7N8Wef9STWM2sA2K1VkeQdfn5nw==
 
-"@cocore/swap-lib@^1.0.0":
+"@core-dex/lib@^1.0.0":
   version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cocore/swap-lib/-/swap-lib-1.0.0.tgz#3ed8c18bb56215919f242688fa07a8e5be19e193"
-  integrity sha512-+xJsP5N9c5ILIphL5LjTl4ZRuKFa2sRRnRHnSMlk9SDNkHR+42L4XisCRCdKhZTI1zMhOyBQ5l090Kg8XPe6BA==
+  resolved "https://registry.yarnpkg.com/@core-dex/lib/-/lib-1.0.0.tgz#dc0052002b59ae58084af2d15076cf8f6253b810"
+  integrity sha512-dXkIlWSn5HYXyEqb18V2nEjdcVCr/F0/+bT+JFvj6cK037P4KT8+pF4vkHWj7VASHFToiTRYsn5sB8YlRVF9rg==
 
-"@cocore/swap-periphery@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cocore/swap-periphery/-/swap-periphery-1.0.0.tgz#b93d57a9e741f0f49aa07dc74b0749727be2abfa"
-  integrity sha512-NFwFKqo7erKVXsyLvxSL8V3kKRe+O5KPbm3NcTEn7+rAPxwO0p+Ku0GmvxTKBsBnojkxQKAtJHv5vV7E5kPPag==
+"@core-dex/periphery@^1.0.1-alpha":
+  version "1.0.1-alpha"
+  resolved "https://registry.yarnpkg.com/@core-dex/periphery/-/periphery-1.0.1-alpha.tgz#1433bc03c481525b6126ddbfa65d53baf9baa494"
+  integrity sha512-OwocRYKNAaMWY3EFYuPhLrekdhsqO4lCHULDrP7vTQ97u/XHz0OjUhuoeZ9rPV1RMVw5TMtDdLhnRLXQWTCS0A==
   dependencies:
-    "@cocore/swap-core" "^1.0.0-alpha"
-    "@cocore/swap-lib" "^1.0.0"
+    "@core-dex/core" "^1.0.1"
+    "@core-dex/lib" "^1.0.0"
 
-"@cocore/swap-sdk@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@cocore/swap-sdk/-/swap-sdk-1.0.0.tgz#a85ad0e3deba62e791bc334a69459499de93cb41"
-  integrity sha512-oTCp/m7/8X13N8F3yk5kdF9rdHnzFdubBChqVADZvLI+Xc7L8J3BK0bIBrOavvXwIKOQYI3AWtI2SP1L8W6HWQ==
+"@core-dex/sdk@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@core-dex/sdk/-/sdk-1.0.1.tgz#c3d5748b5f5b2b0b2c47480fbf2fb61ca87fc9cb"
+  integrity sha512-HyF58NxySjCn+hUMZGY+TNBv3ATl2r3vK6ak/5YLqlek/SjzhSOncfUwxKX0v8pZrpCJti1KsycCRhC9SxFq6w==
   dependencies:
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/solidity" "^5.0.0"

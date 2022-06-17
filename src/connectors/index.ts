@@ -4,7 +4,7 @@ import { InjectedConnector } from '@web3-react/injected-connector'
 import { PortisConnector } from '@web3-react/portis-connector'
 import { WalletConnectConnector } from '@web3-react/walletconnect-connector'
 import { WalletLinkConnector } from '@web3-react/walletlink-connector'
-import COCORESWAP_LOGO_URL from 'assets/svg/logo.svg'
+import COREDEX_LOGO_URL from 'assets/svg/logo.svg'
 import { ALCHEMY_NETWORK_URLS } from 'constants/chainInfo'
 import { ALL_SUPPORTED_CHAIN_IDS, SupportedChainId } from 'constants/chains'
 import getLibrary from 'utils/getLibrary'
@@ -51,7 +51,7 @@ export const portis = new PortisConnector({
 
 export const walletlink = new WalletLinkConnector({
   url: ALCHEMY_NETWORK_URLS[SupportedChainId.MAINNET],
-  appName: 'Cocoreswap',
-  appLogoUrl: COCORESWAP_LOGO_URL,
+  appName: 'CORE DEX',
+  appLogoUrl: COREDEX_LOGO_URL,
   supportedChainIds: [SupportedChainId.MAINNET, SupportedChainId.POLYGON],
 })

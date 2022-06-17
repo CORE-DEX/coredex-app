@@ -183,7 +183,7 @@ export default function Home() {
     <PageWrapper>
       {/* <ThemedBackgroundGlobal backgroundColor={activeNetwork.bgColor} /> */}
       <AutoColumn gap="15px">
-        <TYPE.main>Cocoreswap Overview</TYPE.main>
+        <TYPE.main>CORE DEX Overview</TYPE.main>
         <ResponsiveRow>
           <ChartWrapper>
             <LineChart

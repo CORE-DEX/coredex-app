@@ -1,4 +1,4 @@
-import { Percent } from '@cocore/swap-sdk'
+import { Percent } from '@core-dex/sdk'
 import React, { ReactNode } from 'react'
 import { Box } from 'rebass'
 //import { resetMintState } from 'state/mint/actions'

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token } from '@core-dex/sdk'
 import { useMemo } from 'react'
 
 import { useAllTokenBalances } from '../../state/wallet/hooks'

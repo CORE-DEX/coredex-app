@@ -50,7 +50,7 @@ export type LPReturn = {
   net?: {
     return: number
   }
-  cocoreswap?: {
+  coredex?: {
     return: number
   }
   fees?: {

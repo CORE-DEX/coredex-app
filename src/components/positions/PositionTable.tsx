@@ -61,7 +61,7 @@ const LinkWrapper = styled(Link)`
 
 const SORT_FIELD = {
   value: 'value',
-  cocoreswapReturn: 'cocoreswapReturn',
+  coreDexReturn: 'coreDexReturn',
 }
 
 type LPData = {
@@ -230,21 +230,15 @@ export default function PositionTable({
       ? [...positions]
           .sort((p0, p1) => {
             if (
-              p0.cocoreswap &&
+              p0.coredex &&
               p0.liquidityTokenBalance &&
               p0.pair &&
-              p1.cocoreswap &&
+              p1.coredex &&
               p1.liquidityTokenBalance &&
               p1.pair
             ) {
-              if (sortField === SORT_FIELD.cocoreswapReturn) {
-                return p0?.cocoreswap?.return > p1?.cocoreswap?.return
-                  ? sortDirection
-                    ? -1
-                    : 1
-                  : sortDirection
-                  ? 1
-                  : -1
+              if (sortField === SORT_FIELD.coreDexReturn) {
+                return p0?.coredex?.return > p1?.coredex?.return ? (sortDirection ? -1 : 1) : sortDirection ? 1 : -1
               }
               if (sortField === SORT_FIELD.value) {
                 const bal0 =
@@ -303,8 +297,8 @@ export default function PositionTable({
             <ClickableText color={theme.text2} end={1} onClick={() => handleSort(SORT_FIELD.value)}>
               Liquidity {arrow(SORT_FIELD.value)}
             </ClickableText>
-            <ClickableText color={theme.text2} end={1} onClick={() => handleSort(SORT_FIELD.cocoreswapReturn)}>
-              Total Fees Earned {arrow(SORT_FIELD.cocoreswapReturn)}
+            <ClickableText color={theme.text2} end={1} onClick={() => handleSort(SORT_FIELD.coreDexReturn)}>
+              Total Fees Earned {arrow(SORT_FIELD.coreDexReturn)}
             </ClickableText>
           </ResponsiveGrid>
           <Break />

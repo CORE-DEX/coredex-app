@@ -1,4 +1,4 @@
-import { Token } from '@cocore/swap-sdk'
+import { Token } from '@core-dex/sdk'
 import { TokenList } from '@uniswap/token-lists'
 import React, { useState } from 'react'
 import { ArrowLeft } from 'react-feather'

@@ -1,4 +1,4 @@
-import { CurrencyAmount, Pair, Percent, Token } from '@cocore/swap-sdk'
+import { CurrencyAmount, Pair, Percent, Token } from '@core-dex/sdk'
 import { BIG_INT_ZERO } from 'constants/misc'
 import { useColor } from 'hooks/useColor'
 import { useTotalSupply } from 'hooks/useTotalSupply'

@@ -136,7 +136,7 @@ interface UserMintBarnResults {
 interface ReturnMetrics {
   hodleReturn: number // difference in asset values t0 -> t1 with t0 deposit amounts
   netReturn: number // net return from t0 -> t1
-  cocoreswapReturn: number // netReturn - hodlReturn
+  coreDexReturn: number // netReturn - hodlReturn
   impLoss: number
   fees: number
 }
@@ -229,7 +229,7 @@ export function getMetricsForPositionWindow(position0: LPSnapshots, position1: L
   const assetValueT1 = token0_amount_t0 * position1.token0PriceUSD + token1_amount_t0 * position1.token1PriceUSD
 
   const imp_loss_usd = no_fees_usd - assetValueT1
-  const cocoreswap_return = difference_fees_usd + imp_loss_usd
+  const coredex_return = difference_fees_usd + imp_loss_usd
 
   // get net value change for combined data
   const netValueT0 = t0Ownership * position0.reserveUSD
@@ -238,7 +238,7 @@ export function getMetricsForPositionWindow(position0: LPSnapshots, position1: L
   return {
     hodleReturn: assetValueT1 - assetValueT0,
     netReturn: netValueT1 - netValueT0,
-    cocoreswapReturn: cocoreswap_return,
+    coreDexReturn: coredex_return,
     impLoss: imp_loss_usd,
     fees: difference_fees_usd,
   }
@@ -255,7 +255,7 @@ export async function getLPReturnsOnPair(
   const principal = await getPrincipalForUserPerPair(user, pair.id, dataClient)
   let hodlReturn = 0
   let netReturn = 0
-  let cocoreswapReturn = 0
+  let coreDexReturn = 0
   let fees = 0
 
   snapshots = snapshots.filter((entry) => {
@@ -283,7 +283,7 @@ export async function getLPReturnsOnPair(
     const results = getMetricsForPositionWindow(positionT0, positionT1)
     hodlReturn = hodlReturn + results.hodleReturn
     netReturn = netReturn + results.netReturn
-    cocoreswapReturn = cocoreswapReturn + results.cocoreswapReturn
+    coreDexReturn = coreDexReturn + results.coreDexReturn
     fees = fees + results.fees
   }
 
@@ -292,8 +292,8 @@ export async function getLPReturnsOnPair(
     net: {
       return: netReturn,
     },
-    cocoreswap: {
-      return: cocoreswapReturn,
+    coredex: {
+      return: coreDexReturn,
     },
     fees: {
       sum: fees,

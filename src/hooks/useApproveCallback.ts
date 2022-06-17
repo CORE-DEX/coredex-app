@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Percent, Trade, TradeType } from '@core-dex/sdk'
 import { MaxUint256 } from '@ethersproject/constants'
 import { TransactionResponse } from '@ethersproject/providers'
 import { ROUTER_ADDRESS } from 'constants/addresses'

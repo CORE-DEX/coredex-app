@@ -331,10 +331,10 @@ export default function WalletModal({
           <LightCard style={{ marginBottom: '16px' }}>
             <AutoRow style={{ flexWrap: 'nowrap' }}>
               <TYPE.main fontSize={14}>
-                By connecting a wallet, you agree to CocoreSwap{' '}
+                By connecting a wallet, you agree to CORE DEX{' '}
                 <ExternalLink href="https://uniswap.org/terms-of-service/">Terms of Service</ExternalLink> and
                 acknowledge that you have read and understand the{' '}
-                <ExternalLink href="https://uniswap.org/disclaimer/">CocoreSwap protocol disclaimer</ExternalLink>.
+                <ExternalLink href="https://uniswap.org/disclaimer/">CORE DEX protocol disclaimer</ExternalLink>.
               </TYPE.main>
             </AutoRow>
           </LightCard>

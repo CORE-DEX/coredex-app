@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Pair, Percent, Token } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Pair, Percent, Token } from '@core-dex/sdk'
 import { ReactComponent as DropDown } from 'assets/images/dropdown.svg'
 import useTheme from 'hooks/useTheme'
 import { useActiveWeb3React } from 'hooks/web3'

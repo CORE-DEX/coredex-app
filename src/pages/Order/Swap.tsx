@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Token, Trade, TradeType } from '@cocore/swap-sdk'
+import { Currency, CurrencyAmount, Token, Trade, TradeType } from '@core-dex/sdk'
 import AddressInputPanel from 'components/AddressInputPanel'
 import { ButtonConfirmed, ButtonError, ButtonLight, ButtonPrimary } from 'components/Button'
 import { DarkGreyCard, GreyCard } from 'components/Card'
@@ -432,7 +432,7 @@ export default function Swap({ height }: { height?: string }) {
                           {/* we need to shorten this string on mobile */}
                           {approvalState === ApprovalState.APPROVED
                             ? 'You can now trade {currencies[Field.INPUT]?.symbol}'
-                            : 'Allow the Cocoreswap Protocol to use your {currencies[Field.INPUT]?.symbol}'}
+                            : 'Allow the CORE DEX Protocol to use your {currencies[Field.INPUT]?.symbol}'}
                         </span>
                         {approvalState === ApprovalState.PENDING ? (
                           <Loader stroke="white" />
@@ -441,7 +441,7 @@ export default function Swap({ height }: { height?: string }) {
                         ) : (
                           <MouseoverTooltip
                             text={
-                              'You must give the Cocoreswap smart contracts permission to use your {currencies[Field.INPUT]?.symbol}. You only have to do this once per token.'
+                              'You must give the CORE DEX smart contracts permission to use your {currencies[Field.INPUT]?.symbol}. You only have to do this once per token.'
                             }
                           >
                             <HelpCircle size="20" color={'white'} style={{ marginLeft: '8px' }} />

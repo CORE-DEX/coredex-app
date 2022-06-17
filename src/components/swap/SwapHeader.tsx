@@ -1,4 +1,4 @@
-import { Percent } from '@cocore/swap-sdk'
+import { Percent } from '@core-dex/sdk'
 import ToggleBorder from 'assets/images/toggle_border.png'
 import React from 'react'
 import styled from 'styled-components/macro'
