@@ -1138,10 +1138,10 @@
     "@core-dex/core" "^1.0.1"
     "@core-dex/lib" "^1.0.0"
 
-"@core-dex/sdk@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@core-dex/sdk/-/sdk-1.0.1.tgz#c3d5748b5f5b2b0b2c47480fbf2fb61ca87fc9cb"
-  integrity sha512-HyF58NxySjCn+hUMZGY+TNBv3ATl2r3vK6ak/5YLqlek/SjzhSOncfUwxKX0v8pZrpCJti1KsycCRhC9SxFq6w==
+"@core-dex/sdk@^1.0.1-alpha":
+  version "1.0.1-alpha"
+  resolved "https://registry.yarnpkg.com/@core-dex/sdk/-/sdk-1.0.1-alpha.tgz#89970b1e3d99a73c8a6d4abbb29d936c20928179"
+  integrity sha512-4P67aM3duGM+Rs2tSkpTkilczNwylrkNSCQHiPMvAvsBITA/eyrzIQOXw4/lBO8pSOGTLU4heAqVn0UZwCVx2A==
   dependencies:
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/solidity" "^5.0.0"

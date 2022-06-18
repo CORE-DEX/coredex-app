@@ -9,7 +9,7 @@
   "dependencies": {
     "@apollo/client": "^3.5.10",
     "@core-dex/core": "^1.0.1",
-    "@core-dex/sdk": "^1.0.1",
+    "@core-dex/sdk": "^1.0.1-alpha",
     "@types/styled-components": "^5.1.24",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",

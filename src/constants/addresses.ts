@@ -16,7 +16,7 @@ export const FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(FACTORY_ADD
   SupportedChainId.MUMBAI,
   SupportedChainId.POLYGON,
 ])
-export const ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x32E60736Def55EcFdbE6B329Efed10A827902ccd', [
+export const ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x3584B983Ac30FBdf9Fe21795BBff5e94F66f64C7', [
   SupportedChainId.POLYGON,
   SupportedChainId.MUMBAI,
 ])
