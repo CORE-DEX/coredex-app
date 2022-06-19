@@ -58,7 +58,7 @@ async function fetchEthPrices(
       return {
         data: {
           currentPrice: result.data.bundles[0].ethPrice,
-          oneDayBackPrice: resultOneDay.data.bundles[0].ethPrice,
+          oneDayBackPrice: resultOneDay.data.bundles[0]?.ethPrice,
         },
         error: false,
       }
