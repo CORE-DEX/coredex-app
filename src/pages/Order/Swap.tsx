@@ -1,4 +1,5 @@
 import { Currency, CurrencyAmount, Token, Trade, TradeType } from '@core-dex/sdk'
+import BackCard from 'assets/images/card_backCard.png'
 import AddressInputPanel from 'components/AddressInputPanel'
 import { ButtonConfirmed, ButtonError, ButtonLight, ButtonPrimary } from 'components/Button'
 import { DarkGreyCard, GreyCard } from 'components/Card'
@@ -41,6 +42,29 @@ import { warningSeverity } from 'utils/prices'
 
 import { FONT, LinkStyledButton, TYPE } from '../../theme'
 
+const SwapCard = styled(DarkGreyCard)<{ height?: string; scrollColor?: string }>`
+  width: 100%;
+  height: ${({ height }) => (height ? height : 'auto')};
+  overflow-y: auto;
+  padding: 1rem;
+  border: ${({ theme }) => `2px solid ${theme.border1}`};
+  background-color: ${({ theme }) => theme.bg0};
+  background-image: ${`url(${BackCard})`};
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${({ theme }) => theme.bg2};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${({ scrollColor }) => (scrollColor ? scrollColor : '#00cc227a')};
+    opacity: 0.5;
+  }
+`
+
 const StyledInfo = styled(Info)`
   opacity: 0.4;
   color: ${({ theme }) => theme.text1};
@@ -57,7 +81,7 @@ const Hide1280 = styled.div`
   `};
 `
 
-export default function Swap({ height }: { height?: string }) {
+export default function Swap({ height, scrollColor }: { height?: string; scrollColor: string }) {
   const { account } = useActiveWeb3React()
   const history = useHistory()
   const loadedUrlParams = useDefaultsFromURLSearch()
@@ -297,7 +321,7 @@ export default function Swap({ height }: { height?: string }) {
       <Hide1280>
         <SwapNameCard marginBottom="5px" />
       </Hide1280>
-      <DarkGreyCard height={height}>
+      <SwapCard height={height} scrollColor={scrollColor}>
         <Wrapper id="swap-page">
           <ConfirmSwapModal
             isOpen={showConfirm}
@@ -431,8 +455,8 @@ export default function Swap({ height }: { height?: string }) {
                           />
                           {/* we need to shorten this string on mobile */}
                           {approvalState === ApprovalState.APPROVED
-                            ? 'You can now trade {currencies[Field.INPUT]?.symbol}'
-                            : 'Allow the CORE DEX Protocol to use your {currencies[Field.INPUT]?.symbol}'}
+                            ? `You can now trade ${currencies[Field.INPUT]?.symbol}`
+                            : `Allow the CORE DEX Protocol to use your ${currencies[Field.INPUT]?.symbol}`}
                         </span>
                         {approvalState === ApprovalState.PENDING ? (
                           <Loader stroke="white" />
@@ -440,9 +464,9 @@ export default function Swap({ height }: { height?: string }) {
                           <CheckCircle size="20" color={theme.green1} />
                         ) : (
                           <MouseoverTooltip
-                            text={
-                              'You must give the CORE DEX smart contracts permission to use your {currencies[Field.INPUT]?.symbol}. You only have to do this once per token.'
-                            }
+                            text={`You must give the CORE DEX smart contracts permission to use your ${
+                              currencies[Field.INPUT]?.symbol
+                            }. You only have to do this once per token.`}
                           >
                             <HelpCircle size="20" color={'white'} style={{ marginLeft: '8px' }} />
                           </MouseoverTooltip>
@@ -510,7 +534,7 @@ export default function Swap({ height }: { height?: string }) {
             </RowBetween>
           </AutoColumn>
         </Wrapper>
-      </DarkGreyCard>
+      </SwapCard>
       {!swapIsUnsupported ? null : (
         <UnsupportedCurrencyFooter show={swapIsUnsupported} currencies={[currencies.INPUT, currencies.OUTPUT]} />
       )}

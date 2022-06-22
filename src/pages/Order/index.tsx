@@ -316,9 +316,13 @@ export default function OrderPage() {
                   </>
                 ) : null
               ) : null}
-              {tableView === TableView.SWAP ? <Swap height={SWAP_HEIGHT} /> : null}
+              {tableView === TableView.SWAP ? (
+                <Swap height={SWAP_HEIGHT} scrollColor={activeNetwork.scrollColor} />
+              ) : null}
             </TableWrapper>
-            <SwapWrapper>{smallOrder ? null : <Swap height={SWAP_HEIGHT} />}</SwapWrapper>
+            <SwapWrapper>
+              {smallOrder ? null : <Swap height={SWAP_HEIGHT} scrollColor={activeNetwork.scrollColor} />}
+            </SwapWrapper>
           </ContentLayout>
         </OrderWrapper>
 
