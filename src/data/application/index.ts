@@ -52,8 +52,8 @@ export function useFetchedSubgraphStatus(): {
       name:
         chainId === SupportedChainId.MAINNET
           ? 'core-dex/core-dex-mainnet'
-          : chainId === SupportedChainId.ROPSTEN
-          ? 'core-dex/core-dex-ropsten'
+          : chainId === SupportedChainId.GOERLI
+          ? 'core-dex/core-dex-goerli'
           : chainId === SupportedChainId.POLYGON
           ? 'core-dex/core-dex-polygon'
           : 'core-dex/core-dex-mumbai',

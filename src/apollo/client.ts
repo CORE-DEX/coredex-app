@@ -36,8 +36,8 @@ export const client = new ApolloClient({
   },
 })
 
-export const ropstenClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-ropsten',
+export const goerliClient = new ApolloClient({
+  uri: 'https://api.thegraph.com/subgraphs/name/core-dex/core-dex-goerli',
   cache: new InMemoryCache(),
   //shouldBatch: true,
   defaultOptions: {
@@ -51,8 +51,8 @@ export const ropstenClient = new ApolloClient({
   },
 })
 
-export const ropstenBlockClient = new ApolloClient({
-  uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/ropsten-blocks',
+export const goerliBlockClient = new ApolloClient({
+  uri: 'https://api.thegraph.com/subgraphs/name/blocklytics/goerli-blocks',
   cache: new InMemoryCache(),
   defaultOptions: {
     watchQuery: {

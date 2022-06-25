@@ -2,7 +2,7 @@ import { SupportedChainId } from 'constants/chains'
 
 const ETHERSCAN_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.MAINNET]: 'https://etherscan.io',
-  [SupportedChainId.ROPSTEN]: 'https://ropsten.etherscan.io',
+  [SupportedChainId.GOERLI]: 'https://goerli.etherscan.io',
   [SupportedChainId.MUMBAI]: 'https://mumbai.polygonscan.com',
   [SupportedChainId.POLYGON]: 'https://polygonscan.com',
 }

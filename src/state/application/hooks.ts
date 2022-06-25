@@ -1,13 +1,13 @@
 import { ApolloClient, NormalizedCacheObject } from '@apollo/client'
 import {
+  //polygonBlockClient,
+  //polygonClient,
+  goerliBlockClient,
+  goerliClient,
   //blockClient,
   //client,
   mumbaiBlockClient,
   mumbaiClient,
-  //polygonBlockClient,
-  //polygonClient,
-  ropstenBlockClient,
-  ropstenClient,
 } from 'apollo/client'
 import { SupportedChainId } from 'constants/chains'
 import { useActiveWeb3React } from 'hooks/web3'
@@ -112,14 +112,14 @@ export function useDataClient(): ApolloClient<NormalizedCacheObject> {
   switch (chainId) {
     //case SupportedChainId.MAINNET:
     //  return client
-    case SupportedChainId.ROPSTEN:
-      return ropstenClient
+    case SupportedChainId.GOERLI:
+      return goerliClient
     //case SupportedChainId.POLYGON:
     //  return polygonClient
     case SupportedChainId.MUMBAI:
       return mumbaiClient
     default:
-      return ropstenClient
+      return goerliClient
   }
 }
 
@@ -129,14 +129,14 @@ export function useBlockClient(): ApolloClient<NormalizedCacheObject> {
   switch (chainId) {
     //case SupportedChainId.MAINNET:
     //  return blockClient
-    case SupportedChainId.ROPSTEN:
-      return ropstenBlockClient
+    case SupportedChainId.GOERLI:
+      return goerliBlockClient
     //case SupportedChainId.POLYGON:
     //  return polygonBlockClient
     case SupportedChainId.MUMBAI:
       return mumbaiBlockClient
     default:
-      return ropstenBlockClient
+      return goerliBlockClient
   }
 }
 

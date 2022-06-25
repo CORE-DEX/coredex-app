@@ -65,7 +65,7 @@ export interface TokensState {
 export const initialState: TokensState = {
   byAddress: {
     [SupportedChainId.MAINNET]: {},
-    [SupportedChainId.ROPSTEN]: {},
+    [SupportedChainId.GOERLI]: {},
     [SupportedChainId.POLYGON]: {},
     [SupportedChainId.MUMBAI]: {},
   },

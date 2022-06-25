@@ -5,14 +5,14 @@ import ms from 'ms.macro'
 import { SupportedChainId, SupportedL1ChainId } from './chains'
 
 const ALCHEMY_ETH_KEY = process.env.REACT_APP_ALCHEMY_ETH_KEY
-const ALCHEMY_ROPSTEN_KEY = process.env.REACT_APP_ALCHEMY_ROPSTEN_KEY
+const ALCHEMY_GOERLI_KEY = process.env.REACT_APP_ALCHEMY_GOERLI_KEY
 const ALCHEMY_POLYGON_KEY = process.env.REACT_APP_ALCHEMY_POLYGON_KEY
 const ALCHEMY_MUMBAI_KEY = process.env.REACT_APP_ALCHEMY_MUMBAI_KEY
 if (typeof ALCHEMY_ETH_KEY === 'undefined') {
   throw new Error(`REACT_APP_ALCHEMY_ETH_KEY must be a defined environment variable`)
 }
-if (typeof ALCHEMY_ROPSTEN_KEY === 'undefined') {
-  throw new Error(`REACT_APP_ALCHEMY_ROPSTEN_KEY must be a defined environment variable`)
+if (typeof ALCHEMY_GOERLI_KEY === 'undefined') {
+  throw new Error(`REACT_APP_ALCHEMY_GOERLI_KEY must be a defined environment variable`)
 }
 if (typeof ALCHEMY_POLYGON_KEY === 'undefined') {
   throw new Error(`REACT_APP_ALCHEMY_POLYGON_KEY must be a defined environment variable`)
@@ -26,7 +26,7 @@ if (typeof ALCHEMY_MUMBAI_KEY === 'undefined') {
  */
 export const ALCHEMY_NETWORK_URLS: { [key in SupportedChainId]: string } = {
   [SupportedChainId.MAINNET]: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_ETH_KEY}`,
-  [SupportedChainId.ROPSTEN]: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_ROPSTEN_KEY}`,
+  [SupportedChainId.GOERLI]: `https://eth-goerli.alchemyapi.io/v2/${ALCHEMY_GOERLI_KEY}`,
   [SupportedChainId.POLYGON]: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_POLYGON_KEY}`,
   [SupportedChainId.MUMBAI]: `https://polygon-mumbai.g.alchemy.com/v2/${ALCHEMY_MUMBAI_KEY}`,
 }
@@ -37,7 +37,7 @@ export const ALCHEMY_NETWORK_URLS: { [key in SupportedChainId]: string } = {
 interface AddNetworkInfo {
   readonly rpcUrl: string
   readonly nativeCurrency: {
-    name: string // e.g. 'Ropsten ETH',
+    name: string // e.g. 'Goerli ETH',
     symbol: string // e.g. 'ropETH',
     decimals: number // e.g. 18,
   }
@@ -90,16 +90,16 @@ export const CHAIN_INFO: ChainInfoMap = {
     scrollColor: '#00cc227a',
     toggleColor: '#00cc2214',
   },
-  [SupportedChainId.ROPSTEN]: {
+  [SupportedChainId.GOERLI]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',
-    explorer: 'https://ropsten.etherscan.io/',
+    explorer: 'https://goerli.etherscan.io/',
     infoLink: 'https://info.uniswap.org/#/',
-    label: 'Ropsten',
+    label: 'Goerli',
     logoUrl: ethereumLogoUrl,
     addNetworkInfo: {
-      nativeCurrency: { name: 'Ropsten Ether', symbol: 'ropETH', decimals: 18 },
-      rpcUrl: ALCHEMY_NETWORK_URLS[SupportedChainId.ROPSTEN],
+      nativeCurrency: { name: 'Goerli Ether', symbol: 'ropETH', decimals: 18 },
+      rpcUrl: ALCHEMY_NETWORK_URLS[SupportedChainId.GOERLI],
     },
     bgColor: '#00CC22',
     primaryColor: '#00CC22',

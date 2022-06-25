@@ -96,7 +96,7 @@ export interface PoolsState {
 export const initialState: PoolsState = {
   byAddress: {
     [SupportedChainId.MAINNET]: {},
-    [SupportedChainId.ROPSTEN]: {},
+    [SupportedChainId.GOERLI]: {},
     [SupportedChainId.POLYGON]: {},
     [SupportedChainId.MUMBAI]: {},
   },

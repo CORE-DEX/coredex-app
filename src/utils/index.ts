@@ -21,7 +21,7 @@ export function isAddress(value: any): string | false {
 
 const ETHERSCAN_PREFIXES: { [chainId: number]: string } = {
   [SupportedChainId.MAINNET]: '',
-  [SupportedChainId.ROPSTEN]: 'ropsten.',
+  [SupportedChainId.GOERLI]: 'goerli.',
 }
 
 export function getEtherscanLink(

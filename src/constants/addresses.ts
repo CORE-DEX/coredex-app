@@ -7,7 +7,7 @@ type AddressMap = { [chainId: number]: string }
 
 export const MULTICALL_NETWORKS: AddressMap = {
   [SupportedChainId.MAINNET]: '0xeefBa1e63905eF1D7ACbA5a8513c70307C1cE441',
-  [SupportedChainId.ROPSTEN]: '0x53C43764255c17BD724F74c4eF150724AC50a3ed',
+  [SupportedChainId.GOERLI]: '0x77dca2c955b15e9de4dbbcf1246b4b85b651e50e',
   [SupportedChainId.POLYGON]: '0x11ce4B23bD875D7F5C6a31084f55fDe1e9A87507',
   [SupportedChainId.MUMBAI]: '0x08411ADd0b5AA8ee47563b146743C13b3556c9Cc',
 }
@@ -27,13 +27,13 @@ export const ARGENT_WALLET_DETECTOR_ADDRESS: AddressMap = {
 
 export const ENS_REGISTRAR_ADDRESSES: AddressMap = {
   [SupportedChainId.MAINNET]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
-  [SupportedChainId.ROPSTEN]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
+  [SupportedChainId.GOERLI]: '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e',
 }
 
 export const POOL_HIDE: string[] = []
 export const TOKEN_HIDE: string[] = []
 
-export const ETH_USDC_ADDRESS = '0x013735c5a337457e12b1f5c5a640bc1a2d470547'
+export const ETH_USDC_ADDRESS = '0xc48133ee1acd520647f9f4f47de8eab69b0c5620'
 
 // hide from overview list
 export const TOKEN_BLACKLIST = [

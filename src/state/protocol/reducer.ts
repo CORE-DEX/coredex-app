@@ -41,7 +41,7 @@ export const initialState: ProtocolState = {
     transactions: undefined,
     lastUpdated: undefined,
   },
-  [SupportedChainId.ROPSTEN]: {
+  [SupportedChainId.GOERLI]: {
     data: undefined,
     chartData: undefined,
     transactions: undefined,
